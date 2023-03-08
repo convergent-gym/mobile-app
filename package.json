@@ -6,6 +6,8 @@
     "start": "expo start --dev-client"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.5.7",
+    "@react-navigation/native": "^6.1.6",
     "expo": "~47.0.3",
     "expo-dev-client": "~2.0.0",
     "expo-splash-screen": "~0.17.4",
