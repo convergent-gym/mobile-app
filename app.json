@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "fireTest",
-    "slug": "fireTest",
+    "name": "gat-mobile",
+    "slug": "gat-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
