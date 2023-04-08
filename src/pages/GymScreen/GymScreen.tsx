@@ -1,8 +1,7 @@
 import React from 'react'
 import { BrandColor, PrimaryColor } from '../../constants/theme';
 import { StyleSheet, Text, View, SafeAreaView, ScrollView, TouchableOpacity, Touchable } from 'react-native';
-import { Gyms, TestMap } from '../../api/testData';
-import GymCard from '../../components/GymCard/GymCard';
+import { TestMap } from '../../api/testData';
 import LinkButton from '../../components/LinkButton/LinkButton';
 import Map from '../../api/types/map';
 import { MachineStatus } from '../../api/types/machine';
