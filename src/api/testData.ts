@@ -1,5 +1,6 @@
 import Gym from "./types/gym"
-import Map, { MapItem } from "./types/map"
+import Map from "./types/map"
+import Machine, { MachineType, MachineStatus } from "./types/machine"
 
 export const TestMap: Map = {
     id: "abc123",
@@ -12,188 +13,296 @@ export const TestMap: Map = {
             height: 50,
             width: 50,
             rotation: 0,
+
+            type: MachineType.FreeWeight,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_1",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 70,
             y_pos: 10,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_2",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 130,
             y_pos: 10,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_3",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 190,
             y_pos: 10,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_4",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 250,
             y_pos: 10,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_5",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 310,
             y_pos: 10,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_6",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 370,
             y_pos: 10,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_10",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 10,
             y_pos: 100,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_11",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 70,
             y_pos: 100,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_12",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 130,
             y_pos: 100,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_13",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 190,
             y_pos: 100,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_14",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 250,
             y_pos: 100,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_15",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 310,
             y_pos: 100,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 370,
             y_pos: 100,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
 
         {
             id: "machine_10",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 10,
             y_pos: 160,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_11",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 70,
             y_pos: 160,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_12",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 130,
             y_pos: 160,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_13",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 190,
             y_pos: 160,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_14",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 250,
             y_pos: 160,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_15",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 310,
             y_pos: 160,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
             name: "Power Rack",
+            type: MachineType.FreeWeight,
+
             x_pos: 370,
             y_pos: 160,
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -204,6 +313,10 @@ export const TestMap: Map = {
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -214,6 +327,10 @@ export const TestMap: Map = {
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -224,6 +341,10 @@ export const TestMap: Map = {
             height: 50,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -234,6 +355,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
 
@@ -245,6 +370,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
 
@@ -256,6 +385,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -266,6 +399,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -276,6 +413,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -286,6 +427,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -296,6 +441,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.PlateLoaded,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -306,6 +455,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -316,6 +469,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
 
@@ -327,6 +484,10 @@ export const TestMap: Map = {
             height: 40,
             width: 70,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
 
@@ -338,6 +499,10 @@ export const TestMap: Map = {
             height: 60,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -348,6 +513,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -358,6 +527,10 @@ export const TestMap: Map = {
             height: 40,
             width: 60,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -368,6 +541,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -378,6 +555,10 @@ export const TestMap: Map = {
             height: 60,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.PlateLoaded,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -388,6 +569,10 @@ export const TestMap: Map = {
             height: 60,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -398,6 +583,10 @@ export const TestMap: Map = {
             height: 60,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -408,6 +597,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -418,6 +611,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -428,6 +625,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -438,6 +639,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -448,6 +653,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -458,6 +667,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -468,6 +681,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -478,6 +695,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -488,6 +709,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -498,6 +723,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -508,6 +737,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -518,6 +751,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -528,6 +765,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -538,6 +779,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -548,6 +793,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -558,6 +807,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -568,6 +821,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -578,6 +835,10 @@ export const TestMap: Map = {
             height: 40,
             width: 40,
             rotation: -15,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -588,6 +849,10 @@ export const TestMap: Map = {
             height: 40,
             width: 40,
             rotation: 15,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -598,6 +863,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -608,6 +877,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -618,6 +891,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -628,6 +905,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -638,6 +919,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -648,6 +933,10 @@ export const TestMap: Map = {
             height: 40,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -657,6 +946,10 @@ export const TestMap: Map = {
             height: 40,
             width: 28,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
 
@@ -667,7 +960,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -676,7 +973,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -685,7 +986,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -694,7 +999,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -703,7 +1012,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -712,7 +1025,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -721,7 +1038,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -730,7 +1051,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -739,7 +1064,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -748,7 +1077,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -757,7 +1090,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -766,7 +1103,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -775,7 +1116,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -784,7 +1129,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -793,7 +1142,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -802,7 +1155,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -811,7 +1168,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -820,7 +1181,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -829,7 +1194,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -839,7 +1208,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -849,7 +1222,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -859,7 +1236,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -869,7 +1250,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -879,7 +1264,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -889,7 +1278,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -899,7 +1292,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -909,7 +1306,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -919,7 +1320,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -929,7 +1334,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -938,7 +1347,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -948,7 +1361,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -957,7 +1374,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -967,7 +1388,11 @@ export const TestMap: Map = {
             y_pos: 590,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
         {
             id: "machine_16",
@@ -976,7 +1401,11 @@ export const TestMap: Map = {
             y_pos: 635,
             height: 40,
             width: 28,
-            rotation: 0
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -987,6 +1416,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -997,6 +1430,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1007,6 +1444,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1017,6 +1458,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1027,6 +1472,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1037,6 +1486,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1047,6 +1500,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1057,6 +1514,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1067,6 +1528,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1077,6 +1542,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1087,6 +1556,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1097,6 +1570,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1107,6 +1584,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cardio,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1117,6 +1598,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1127,6 +1612,10 @@ export const TestMap: Map = {
             height: 30,
             width: 80,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1137,6 +1626,10 @@ export const TestMap: Map = {
             height: 40,
             width: 30,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1147,6 +1640,10 @@ export const TestMap: Map = {
             height: 25,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1157,6 +1654,10 @@ export const TestMap: Map = {
             height: 25,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1167,6 +1668,10 @@ export const TestMap: Map = {
             height: 25,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
         {
@@ -1177,6 +1682,10 @@ export const TestMap: Map = {
             height: 25,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
 
@@ -1188,6 +1697,10 @@ export const TestMap: Map = {
             height: 25,
             width: 50,
             rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
         },
 
     ]

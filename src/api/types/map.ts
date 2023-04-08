@@ -1,17 +1,8 @@
+import Machine  from "./machine";
+
 type Map = {
     id: string,
-    items: MapItem[]
+    items: Machine[]
 }
 
-type MapItem = {
-    id: string,
-    width: number,
-    height: number,
-    x_pos: number,
-    y_pos: number,
-    rotation: number,
-    name: string
-}
-
-export {MapItem};
 export default Map;

@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrandColor, PrimaryColor } from '../../constants/theme';
-import { StyleSheet, Text, View, SafeAreaView, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, ScrollView, TouchableOpacity, Touchable } from 'react-native';
 import { Gyms, TestMap } from '../../api/testData';
 import GymCard from '../../components/GymCard/GymCard';
 import LinkButton from '../../components/LinkButton/LinkButton';
-import Map, { MapItem } from '../../api/types/map';
+import Map from '../../api/types/map';
 
 export default function GymScreen({navigation}) {
 
@@ -45,7 +45,9 @@ export default function GymScreen({navigation}) {
                     TestMap.items.map((item, i)=>{
                         return(
                             <View style={[styles.machineContainer, { transform: item.rotation == 0 ? "none" : "rotate("+item.rotation+"deg)", left: item.x_pos, top: item.y_pos,  height: item.height,  width: item.width, backgroundColor: Math.random() > .4 ? "green" : "red"}]}>
-                                <Text style={styles.machineText}>{item.name}</Text>
+                               <TouchableOpacity onPress={()=>{navigation.navigate("MachineDetailScreen")}}>
+                                    <Text style={styles.machineText}>{item.name}</Text>
+                               </TouchableOpacity>
                             </View>
                         )
                     })
