@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrandColor, PrimaryColor } from '../../constants/theme';
 import { StyleSheet, Text, View, SafeAreaView, ScrollView, TouchableOpacity, Touchable } from 'react-native';
 import { TestMap } from '../../api/testData';
 import LinkButton from '../../components/LinkButton/LinkButton';
 import Map from '../../api/types/map';
 import { MachineStatus } from '../../api/types/machine';
+import { db } from '../../../firebaseConfig';
+import { collection, onSnapshot, getDoc, doc } from 'firebase/firestore';
 
 export default function GymScreen({navigation}) {
+
+    const [data, setData] = useState();
+    onSnapshot(doc(db, 'SwoleManGym', 'machine1'), (doc) => {
+        setData(doc.data().occupied);
+    })
 
     function getMapBounds(map: Map) {
         let max_width = -1;
@@ -43,10 +50,11 @@ export default function GymScreen({navigation}) {
             <View style={{width: getMapBounds(TestMap).max_width, height: getMapBounds(TestMap).max_height}}></View>
                 {
                     TestMap.items.map((item, i)=>{
-                        item.status = Math.random() > .4 ? MachineStatus.Open : MachineStatus.Taken;
+                        //item.status = Math.random() > .4 ? MachineStatus.Open : MachineStatus.Taken;
+                        item.status = MachineStatus.Open;
                         return(
-                            <View style={[styles.machineContainer, { transform: item.rotation == 0 ? "none" : "rotate("+item.rotation+"deg)", left: item.x_pos, top: item.y_pos,  height: item.height,  width: item.width, backgroundColor: item.status  === MachineStatus.Open ? "green" : "red"}]}>
-                               <TouchableOpacity onPress={()=>{navigation.navigate("MachineDetailScreen")}}>
+                            <View style={[styles.machineContainer, { transform: item.rotation == 0 ? "none" : "rotate("+item.rotation+"deg)", left: item.x_pos, top: item.y_pos,  height: item.height,  width: item.width, backgroundColor: item.id == "machine_1" ? (data ? "green" : "red") : (item.status  === MachineStatus.Open ? "green" : "red")}]}>
+                               <TouchableOpacity onPress={()=>{navigation.navigate("MachineDetailScreen", { item: item })}}>    
                                     <Text style={styles.machineText}>{item.name}</Text>
                                </TouchableOpacity>
                             </View>
