@@ -5,6 +5,7 @@ import { Gyms, TestMap } from '../../api/testData';
 import GymCard from '../../components/GymCard/GymCard';
 import LinkButton from '../../components/LinkButton/LinkButton';
 import Map from '../../api/types/map';
+import { MachineStatus } from '../../api/types/machine';
 
 export default function GymScreen({navigation}) {
 
@@ -43,8 +44,9 @@ export default function GymScreen({navigation}) {
             <View style={{width: getMapBounds(TestMap).max_width, height: getMapBounds(TestMap).max_height}}></View>
                 {
                     TestMap.items.map((item, i)=>{
+                        item.status = Math.random() > .4 ? MachineStatus.Open : MachineStatus.Taken;
                         return(
-                            <View style={[styles.machineContainer, { transform: item.rotation == 0 ? "none" : "rotate("+item.rotation+"deg)", left: item.x_pos, top: item.y_pos,  height: item.height,  width: item.width, backgroundColor: Math.random() > .4 ? "green" : "red"}]}>
+                            <View style={[styles.machineContainer, { transform: item.rotation == 0 ? "none" : "rotate("+item.rotation+"deg)", left: item.x_pos, top: item.y_pos,  height: item.height,  width: item.width, backgroundColor: item.status  === MachineStatus.Open ? "green" : "red"}]}>
                                <TouchableOpacity onPress={()=>{navigation.navigate("MachineDetailScreen")}}>
                                     <Text style={styles.machineText}>{item.name}</Text>
                                </TouchableOpacity>

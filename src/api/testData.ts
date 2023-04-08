@@ -6,6 +6,20 @@ export const TestMap: Map = {
     id: "abc123",
     items: [
         {
+            id: "machine_16",
+            name: "Lat Pulldown",
+            x_pos: 495,
+            y_pos: 760,
+            height: 30,
+            width: 80,
+            rotation: 0,
+            status: MachineStatus.Open,
+            type: MachineType.Cable,
+            gym_id: "abc123",
+            model_number: "xyz456"
+        },
+
+        {
             id: "machine_0",
             name: "Deadlift Platform",
             x_pos: 10,
