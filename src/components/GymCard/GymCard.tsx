@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import { PrimaryColor } from '../../constants/theme';
-import { GestureResponderEvent, StyleSheet, Text, View } from 'react-native';
+import { GestureResponderEvent, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Gym from '../../api/types/gym';
 
-export default function GymCard(props: {gym: Gym}) {
+export default function GymCard(props: {gym: Gym, onPressIn?: (e: GestureResponderEvent) => void, onPress?: (e: GestureResponderEvent) => void; }) {
     function timeNumberToString(time: number) {
         let am_pm = "AM";
             
@@ -48,7 +48,7 @@ export default function GymCard(props: {gym: Gym}) {
     }
     
     return (
-        <View style={{width: "100%", paddingHorizontal: "5%"}}>
+        <TouchableOpacity activeOpacity={.8} style={{width: "100%", paddingHorizontal: "5%"}}  onPressIn={props.onPressIn} onPress={props.onPress}>
                             <View style={styles.gymCard}>
                                 <View style={{display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
                                     <View>
@@ -59,7 +59,7 @@ export default function GymCard(props: {gym: Gym}) {
                                     <Ionicons name="arrow-forward-circle-outline" size={32} color="black" />
                                 </View>
                             </View>
-                        </View>
+                        </TouchableOpacity>
     )
 }
 

@@ -17,7 +17,7 @@ export default function GymSelecionScreen({navigation}) {
             </View>
 
             <ScrollView style={{width: '100%'}}>
-                {Gyms.map((gym, i) => (<GymCard gym={gym} key={i}/>))}
+                {Gyms.map((gym, i) => (<GymCard gym={gym} key={i} onPress={()=>{navigation.navigate("GymScreen")}}/>))}
             </ScrollView>
       </SafeAreaView>
     )
