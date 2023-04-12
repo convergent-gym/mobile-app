@@ -1,11 +1,29 @@
-import React, {useState} from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import { BrandColor, PrimaryColor } from '../../constants/theme';
 import { StyleSheet, Text, TextInput, View, Image, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import BigButton from '../../components/BigButton/BigButton';
 import LinkButton from '../../components/LinkButton/LinkButton';
+import AppLoading from 'expo-app-loading';
+import useFonts from '../../../hooks/useFonts';
 
 export default function LoginScreen({navigation}) {
     const [signInSignUp, setSignInSignUp] = useState<'SignIn' | 'SignUp'>('SignIn');
+    const LoadFonts = async () => {
+        await useFonts();
+      };
+    
+      const [IsReady, SetIsReady] = useState(false);
+    
+      if (!IsReady) {
+        return (
+          <AppLoading
+            startAsync={LoadFonts}
+            onFinish={() => SetIsReady(true)}
+            onError={() => {}}
+          />
+        );
+      }
+
 
     return (
       <KeyboardAvoidingView style={styles.container} behavior='height'>
@@ -17,7 +35,7 @@ export default function LoginScreen({navigation}) {
 
             <View> 
                 {/* This wrapping view is necessary for the keyboard avoiding view to work nicely */}
-                <Text style={styles.titleText}>Swole Control</Text>
+                <Text style={[styles.titleText]}>Swole Control</Text>
             </View>
             
             <View style={{display: "flex", marginVertical: 40, flexDirection: "row", justifyContent: "space-evenly", width: "80%"}}>
@@ -40,12 +58,12 @@ export default function LoginScreen({navigation}) {
 
             {
                 signInSignUp === "SignIn" && 
-                <LinkButton text={"Forgot Password?"} />
+                <LinkButton text={"Forgot Password?"}/>
             }
 
             {
                 signInSignUp === "SignUp" && 
-                <Text style={{color: PrimaryColor, width: "80%", textAlign: "center"}}>
+                <Text style={{color: PrimaryColor, width: "80%", textAlign: "center", fontFamily: 'K2D'}}>
                     By signing up, you agree to our Privacy Policy and Terms of Service.
                 </Text>
             }
@@ -61,6 +79,7 @@ export default function LoginScreen({navigation}) {
         alignItems: "center"
     },
     textInput:{
+        fontFamily: 'K2D',
         backgroundColor: "#FFFFFF",
         height: 40,
         borderRadius: 10,
@@ -73,12 +92,12 @@ export default function LoginScreen({navigation}) {
     },
     optionDeselected: {
         color: '#FFFFFF',
-        fontWeight: 'bold',
+        fontFamily: 'K2D-Bold',
         fontSize: 24
     },
     optionSelected: {
         color: '#A0C182',
-        fontWeight: 'bold',
+        fontFamily: 'K2D-Bold',
         fontSize: 24
     },
     logo: {
@@ -93,10 +112,12 @@ export default function LoginScreen({navigation}) {
     },
     body: {
       color: 'green',
+      fontFamily: 'K2D',
       fontSize: 60,
     },
     titleText: {
       color: '#FFFFFF',
+      fontFamily: 'K2D-Medium',
       fontSize: 48
     },
   });

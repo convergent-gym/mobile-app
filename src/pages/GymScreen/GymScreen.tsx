@@ -6,7 +6,9 @@ import LinkButton from '../../components/LinkButton/LinkButton';
 import Map from '../../api/types/map';
 import { MachineStatus } from '../../api/types/machine';
 import { db } from '../../../firebaseConfig';
-import { collection, onSnapshot, getDoc, doc } from 'firebase/firestore';
+import { onSnapshot, doc } from 'firebase/firestore';
+import AppLoading from 'expo-app-loading';
+import useFonts from '../../../hooks/useFonts';
 
 export default function GymScreen({navigation}) {
 
@@ -14,6 +16,22 @@ export default function GymScreen({navigation}) {
     onSnapshot(doc(db, 'SwoleManGym', 'machine1'), (doc) => {
         setData(doc.data().occupied);
     })
+
+    const [IsReady, SetIsReady] = useState(false);
+
+    const LoadFonts = async () => {
+      await useFonts();
+    };
+  
+    if (!IsReady) {
+      return (
+        <AppLoading
+          startAsync={LoadFonts}
+          onFinish={() => SetIsReady(true)}
+          onError={() => {}}
+        />
+      );
+    }
 
     function getMapBounds(map: Map) {
         let max_width = -1;
@@ -38,8 +56,8 @@ export default function GymScreen({navigation}) {
       <SafeAreaView style={styles.container}>
             <View style={{width: "90%", marginVertical: 30}}> 
                 <LinkButton text={"Back"} onPressIn={()=>{navigation.pop()}}/>
-                <Text style={styles.titleText}>Gregory Gym</Text>
-                <Text style={{color: PrimaryColor, fontSize: 24}}>
+                <Text style={[styles.titleText]}>Gregory Gym</Text>
+                <Text style={{color: PrimaryColor, fontSize: 24, fontFamily: "K2D-Medium"}}>
                     Showing all machines
                 </Text>     
             </View>
@@ -53,7 +71,7 @@ export default function GymScreen({navigation}) {
                         //item.status = Math.random() > .4 ? MachineStatus.Open : MachineStatus.Taken;
                         item.status = MachineStatus.Open;
                         return(
-                            <View style={[styles.machineContainer, { transform: item.rotation == 0 ? "none" : "rotate("+item.rotation+"deg)", left: item.x_pos, top: item.y_pos,  height: item.height,  width: item.width, backgroundColor: item.id == "machine_1" ? (data ? "green" : "red") : (item.status  === MachineStatus.Open ? "green" : "red")}]}>
+                            <View style={[styles.machineContainer, { transform: item.rotation == 0 ? "none" : "rotate("+item.rotation+"deg)", left: item.x_pos, top: item.y_pos,  height: item.height,  width: item.width, backgroundColor: item.id == "machine_1" ? (data ? "green" : "red") : (item.status  === MachineStatus.Open ? "green" : "red")}]} key={i}>
                                <TouchableOpacity onPress={()=>{navigation.navigate("MachineDetailScreen", { item: item })}}>    
                                     <Text style={styles.machineText}>{item.name}</Text>
                                </TouchableOpacity>
@@ -78,7 +96,8 @@ export default function GymScreen({navigation}) {
     machineText: {
         color: "white",
         fontWeight: "600",
-        textAlign: "center"
+        fontFamily: "K2D",
+        textAlign: "center",
     },
     container: {
       flex: 1,
@@ -87,6 +106,7 @@ export default function GymScreen({navigation}) {
     },
     titleText: {
       color: '#FFFFFF',
+      fontFamily: "K2D-Bold",
       fontSize: 36
     },
   });

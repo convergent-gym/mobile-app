@@ -3,8 +3,26 @@ import { PrimaryColor } from '../../constants/theme';
 import { GestureResponderEvent, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Gym from '../../api/types/gym';
+import AppLoading from 'expo-app-loading';
+import useFonts from '../../../hooks/useFonts';
 
 export default function GymCard(props: {gym: Gym, onPressIn?: (e: GestureResponderEvent) => void, onPress?: (e: GestureResponderEvent) => void; }) {
+    const LoadFonts = async () => {
+        await useFonts();
+      };
+    
+      const [IsReady, SetIsReady] = useState(false);
+    
+      if (!IsReady) {
+        return (
+          <AppLoading
+            startAsync={LoadFonts}
+            onFinish={() => SetIsReady(true)}
+            onError={() => {}}
+          />
+        );
+      }
+    
     function timeNumberToString(time: number) {
         let am_pm = "AM";
             
@@ -65,10 +83,11 @@ export default function GymCard(props: {gym: Gym, onPressIn?: (e: GestureRespond
 
 const styles = StyleSheet.create({
     gymTitle: {
-        fontWeight: "bold",
+        fontFamily: 'K2D-Bold',
         fontSize: 20
     },
     gymSubtitle: {
+        fontFamily: 'K2D',
         fontSize: 16
     },
     gymCard: {

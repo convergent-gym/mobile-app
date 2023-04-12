@@ -15,6 +15,41 @@
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 		D0420A27D69247B3B473EF98 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D38823CB384A6E9AFFADBA /* noop-file.swift */; };
+		F36544EF1DDB43C38258B31B /* K2D-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8117E0AE15444B8ABB2AEF0 /* K2D-Bold.ttf */; };
+		3066AC31F1B64B40B3A1727E /* K2D-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6A809F5A12E4C8DA01503A0 /* K2D-BoldItalic.ttf */; };
+		42E55A7389CD48B29B3CF19B /* K2D-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 182426FBBEC54CB499413702 /* K2D-ExtraBold.ttf */; };
+		95C1FAFAD3B2445FB81C56BE /* K2D-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78987C467AB545E1A4E97D57 /* K2D-ExtraBoldItalic.ttf */; };
+		579AB7DFB11E42DAAF72A28B /* K2D-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C254C57FE74644ABA0242C18 /* K2D-ExtraLight.ttf */; };
+		71BE02068207426F9E77D456 /* K2D-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2686D009988443F3A8D9293F /* K2D-ExtraLightItalic.ttf */; };
+		B8D900E3B0B34FBB84523029 /* K2D-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02CCCF9A7D8540E6A0D14384 /* K2D-Italic.ttf */; };
+		B0A3EBA453E0465B848B1A2C /* K2D-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0501BDBBE42448794C42B5C /* K2D-Light.ttf */; };
+		FD6A8FD3570F42A5891D8578 /* K2D-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 664012A9ED1B4FB1A5549002 /* K2D-LightItalic.ttf */; };
+		E4F2C583C3034EDEBEDBC940 /* K2D-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7401881EF7F4F89BB926321 /* K2D-Medium.ttf */; };
+		68A8562F8291431996DDEB5D /* K2D-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A61845CF689C4D04BC1DA9BC /* K2D-MediumItalic.ttf */; };
+		39B8D840222340EFA0FCCC8A /* K2D-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF88CA608D494EA2BD63EB0E /* K2D-Regular.ttf */; };
+		E99F4C19F4364666A9EB3DBB /* K2D-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56DC44FFA08244D38754736B /* K2D-SemiBold.ttf */; };
+		D1AEA4630BAB4D2A8E5D3293 /* K2D-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8BAE023575448E4B742D1D1 /* K2D-SemiBoldItalic.ttf */; };
+		D6C0542E872B4266A7B75516 /* K2D-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17E8343953D94804B0CED0D3 /* K2D-Thin.ttf */; };
+		0B28049ADD004D7E8065F895 /* K2D-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6871E5FFD9FC42C48D89CAB0 /* K2D-ThinItalic.ttf */; };
+		406925FBE55F49EEB57CA9AA /* ._K2D-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1ADC72CAB69C4F0BA94B77BC /* ._K2D-Bold.ttf */; };
+		32476DF42A4047D9A3547C41 /* ._K2D-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E572E346B0A4C2D95F6A7E2 /* ._K2D-BoldItalic.ttf */; };
+		2CDC0C2C4F8142EB8755B0C8 /* ._K2D-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CCCD76532E249D9B6A70101 /* ._K2D-ExtraBold.ttf */; };
+		680544E863B0452EA9745493 /* ._K2D-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9672770C09EE4333AAB62869 /* ._K2D-ExtraBoldItalic.ttf */; };
+		2DCFFDC5A9784328BA889E41 /* ._K2D-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665FE38467D140CF9F8A1F4E /* ._K2D-ExtraLight.ttf */; };
+		EF49175ADD16407AB4810F82 /* ._K2D-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CF122E09A8D49949E18C317 /* ._K2D-ExtraLightItalic.ttf */; };
+		C0DAE9BFDCAF4A448BCB5B76 /* ._K2D-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786280CE6F2640DAA6F358B1 /* ._K2D-Italic.ttf */; };
+		960D92ED5439457CA781BBAA /* ._K2D-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B563A89B9DA4D54B226B3E3 /* ._K2D-Light.ttf */; };
+		337B87902A1F4E5E892FDB64 /* ._K2D-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26545066F637443C93DF5643 /* ._K2D-LightItalic.ttf */; };
+		13DB0557DF154A999B11BD71 /* ._K2D-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAAD7644E06C4246A6DB5956 /* ._K2D-Medium.ttf */; };
+		C1DB6A40E5EF4B7CB04BE9AE /* ._K2D-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F3DD06A27A04530ACF441AF /* ._K2D-MediumItalic.ttf */; };
+		0C51B5FFBC964EB78D047564 /* ._K2D-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40ADDAD4BD4D48B587ED1B46 /* ._K2D-Regular.ttf */; };
+		09362DB2CC394B8C81E6C3DA /* ._K2D-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD8721D477D409E8A91FC59 /* ._K2D-SemiBold.ttf */; };
+		90514854C140408DBB0CF055 /* ._K2D-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FD544208A894432BBC9DCCA /* ._K2D-SemiBoldItalic.ttf */; };
+		CA8CC1F81D864314AB581523 /* ._K2D-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D402208E642840338B212CEE /* ._K2D-Thin.ttf */; };
+		A5D7F10EC960480880204FBC /* ._K2D-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94B217E3D1824E6F968A4DFD /* ._K2D-ThinItalic.ttf */; };
+		D0D1AA325D734FDEBCA7F4F1 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 853BBE62228B4AD68CAD5698 /* OFL.txt */; };
+		E039E2E7C7F646328494F5FD /* ._K2D in Resources */ = {isa = PBXBuildFile; fileRef = A87FBD6D25B94495B6AC46D1 /* ._K2D */; };
+		8BCBEFFB7C3D4AB4B5B74C58 /* ._OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0086CA294C0B4B3496DEAA6A /* ._OFL.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +68,41 @@
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-gatmobile/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		B8117E0AE15444B8ABB2AEF0 /* K2D-Bold.ttf */ = {isa = PBXFileReference; name = "K2D-Bold.ttf"; path = "../assets/fonts/K2D/K2D-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D6A809F5A12E4C8DA01503A0 /* K2D-BoldItalic.ttf */ = {isa = PBXFileReference; name = "K2D-BoldItalic.ttf"; path = "../assets/fonts/K2D/K2D-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		182426FBBEC54CB499413702 /* K2D-ExtraBold.ttf */ = {isa = PBXFileReference; name = "K2D-ExtraBold.ttf"; path = "../assets/fonts/K2D/K2D-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		78987C467AB545E1A4E97D57 /* K2D-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "K2D-ExtraBoldItalic.ttf"; path = "../assets/fonts/K2D/K2D-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C254C57FE74644ABA0242C18 /* K2D-ExtraLight.ttf */ = {isa = PBXFileReference; name = "K2D-ExtraLight.ttf"; path = "../assets/fonts/K2D/K2D-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2686D009988443F3A8D9293F /* K2D-ExtraLightItalic.ttf */ = {isa = PBXFileReference; name = "K2D-ExtraLightItalic.ttf"; path = "../assets/fonts/K2D/K2D-ExtraLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		02CCCF9A7D8540E6A0D14384 /* K2D-Italic.ttf */ = {isa = PBXFileReference; name = "K2D-Italic.ttf"; path = "../assets/fonts/K2D/K2D-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C0501BDBBE42448794C42B5C /* K2D-Light.ttf */ = {isa = PBXFileReference; name = "K2D-Light.ttf"; path = "../assets/fonts/K2D/K2D-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		664012A9ED1B4FB1A5549002 /* K2D-LightItalic.ttf */ = {isa = PBXFileReference; name = "K2D-LightItalic.ttf"; path = "../assets/fonts/K2D/K2D-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D7401881EF7F4F89BB926321 /* K2D-Medium.ttf */ = {isa = PBXFileReference; name = "K2D-Medium.ttf"; path = "../assets/fonts/K2D/K2D-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A61845CF689C4D04BC1DA9BC /* K2D-MediumItalic.ttf */ = {isa = PBXFileReference; name = "K2D-MediumItalic.ttf"; path = "../assets/fonts/K2D/K2D-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FF88CA608D494EA2BD63EB0E /* K2D-Regular.ttf */ = {isa = PBXFileReference; name = "K2D-Regular.ttf"; path = "../assets/fonts/K2D/K2D-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		56DC44FFA08244D38754736B /* K2D-SemiBold.ttf */ = {isa = PBXFileReference; name = "K2D-SemiBold.ttf"; path = "../assets/fonts/K2D/K2D-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C8BAE023575448E4B742D1D1 /* K2D-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "K2D-SemiBoldItalic.ttf"; path = "../assets/fonts/K2D/K2D-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		17E8343953D94804B0CED0D3 /* K2D-Thin.ttf */ = {isa = PBXFileReference; name = "K2D-Thin.ttf"; path = "../assets/fonts/K2D/K2D-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6871E5FFD9FC42C48D89CAB0 /* K2D-ThinItalic.ttf */ = {isa = PBXFileReference; name = "K2D-ThinItalic.ttf"; path = "../assets/fonts/K2D/K2D-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1ADC72CAB69C4F0BA94B77BC /* ._K2D-Bold.ttf */ = {isa = PBXFileReference; name = "._K2D-Bold.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5E572E346B0A4C2D95F6A7E2 /* ._K2D-BoldItalic.ttf */ = {isa = PBXFileReference; name = "._K2D-BoldItalic.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7CCCD76532E249D9B6A70101 /* ._K2D-ExtraBold.ttf */ = {isa = PBXFileReference; name = "._K2D-ExtraBold.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9672770C09EE4333AAB62869 /* ._K2D-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "._K2D-ExtraBoldItalic.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		665FE38467D140CF9F8A1F4E /* ._K2D-ExtraLight.ttf */ = {isa = PBXFileReference; name = "._K2D-ExtraLight.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0CF122E09A8D49949E18C317 /* ._K2D-ExtraLightItalic.ttf */ = {isa = PBXFileReference; name = "._K2D-ExtraLightItalic.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-ExtraLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		786280CE6F2640DAA6F358B1 /* ._K2D-Italic.ttf */ = {isa = PBXFileReference; name = "._K2D-Italic.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8B563A89B9DA4D54B226B3E3 /* ._K2D-Light.ttf */ = {isa = PBXFileReference; name = "._K2D-Light.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		26545066F637443C93DF5643 /* ._K2D-LightItalic.ttf */ = {isa = PBXFileReference; name = "._K2D-LightItalic.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AAAD7644E06C4246A6DB5956 /* ._K2D-Medium.ttf */ = {isa = PBXFileReference; name = "._K2D-Medium.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9F3DD06A27A04530ACF441AF /* ._K2D-MediumItalic.ttf */ = {isa = PBXFileReference; name = "._K2D-MediumItalic.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		40ADDAD4BD4D48B587ED1B46 /* ._K2D-Regular.ttf */ = {isa = PBXFileReference; name = "._K2D-Regular.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2DD8721D477D409E8A91FC59 /* ._K2D-SemiBold.ttf */ = {isa = PBXFileReference; name = "._K2D-SemiBold.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7FD544208A894432BBC9DCCA /* ._K2D-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "._K2D-SemiBoldItalic.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D402208E642840338B212CEE /* ._K2D-Thin.ttf */ = {isa = PBXFileReference; name = "._K2D-Thin.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		94B217E3D1824E6F968A4DFD /* ._K2D-ThinItalic.ttf */ = {isa = PBXFileReference; name = "._K2D-ThinItalic.ttf"; path = "../assets/fonts/__MACOSX/K2D/._K2D-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		853BBE62228B4AD68CAD5698 /* OFL.txt */ = {isa = PBXFileReference; name = "OFL.txt"; path = "../assets/fonts/K2D/OFL.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A87FBD6D25B94495B6AC46D1 /* ._K2D */ = {isa = PBXFileReference; name = "._K2D"; path = "../assets/fonts/__MACOSX/._K2D"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0086CA294C0B4B3496DEAA6A /* ._OFL.txt */ = {isa = PBXFileReference; name = "._OFL.txt"; path = "../assets/fonts/__MACOSX/K2D/._OFL.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +158,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
+				EFBE8E76D4F842758B6D73C5 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -135,6 +206,49 @@
 			);
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
+		};
+		EFBE8E76D4F842758B6D73C5 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				B8117E0AE15444B8ABB2AEF0 /* K2D-Bold.ttf */,
+				D6A809F5A12E4C8DA01503A0 /* K2D-BoldItalic.ttf */,
+				182426FBBEC54CB499413702 /* K2D-ExtraBold.ttf */,
+				78987C467AB545E1A4E97D57 /* K2D-ExtraBoldItalic.ttf */,
+				C254C57FE74644ABA0242C18 /* K2D-ExtraLight.ttf */,
+				2686D009988443F3A8D9293F /* K2D-ExtraLightItalic.ttf */,
+				02CCCF9A7D8540E6A0D14384 /* K2D-Italic.ttf */,
+				C0501BDBBE42448794C42B5C /* K2D-Light.ttf */,
+				664012A9ED1B4FB1A5549002 /* K2D-LightItalic.ttf */,
+				D7401881EF7F4F89BB926321 /* K2D-Medium.ttf */,
+				A61845CF689C4D04BC1DA9BC /* K2D-MediumItalic.ttf */,
+				FF88CA608D494EA2BD63EB0E /* K2D-Regular.ttf */,
+				56DC44FFA08244D38754736B /* K2D-SemiBold.ttf */,
+				C8BAE023575448E4B742D1D1 /* K2D-SemiBoldItalic.ttf */,
+				17E8343953D94804B0CED0D3 /* K2D-Thin.ttf */,
+				6871E5FFD9FC42C48D89CAB0 /* K2D-ThinItalic.ttf */,
+				1ADC72CAB69C4F0BA94B77BC /* ._K2D-Bold.ttf */,
+				5E572E346B0A4C2D95F6A7E2 /* ._K2D-BoldItalic.ttf */,
+				7CCCD76532E249D9B6A70101 /* ._K2D-ExtraBold.ttf */,
+				9672770C09EE4333AAB62869 /* ._K2D-ExtraBoldItalic.ttf */,
+				665FE38467D140CF9F8A1F4E /* ._K2D-ExtraLight.ttf */,
+				0CF122E09A8D49949E18C317 /* ._K2D-ExtraLightItalic.ttf */,
+				786280CE6F2640DAA6F358B1 /* ._K2D-Italic.ttf */,
+				8B563A89B9DA4D54B226B3E3 /* ._K2D-Light.ttf */,
+				26545066F637443C93DF5643 /* ._K2D-LightItalic.ttf */,
+				AAAD7644E06C4246A6DB5956 /* ._K2D-Medium.ttf */,
+				9F3DD06A27A04530ACF441AF /* ._K2D-MediumItalic.ttf */,
+				40ADDAD4BD4D48B587ED1B46 /* ._K2D-Regular.ttf */,
+				2DD8721D477D409E8A91FC59 /* ._K2D-SemiBold.ttf */,
+				7FD544208A894432BBC9DCCA /* ._K2D-SemiBoldItalic.ttf */,
+				D402208E642840338B212CEE /* ._K2D-Thin.ttf */,
+				94B217E3D1824E6F968A4DFD /* ._K2D-ThinItalic.ttf */,
+				853BBE62228B4AD68CAD5698 /* OFL.txt */,
+				A87FBD6D25B94495B6AC46D1 /* ._K2D */,
+				0086CA294C0B4B3496DEAA6A /* ._OFL.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -200,6 +314,41 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
+				F36544EF1DDB43C38258B31B /* K2D-Bold.ttf in Resources */,
+				3066AC31F1B64B40B3A1727E /* K2D-BoldItalic.ttf in Resources */,
+				42E55A7389CD48B29B3CF19B /* K2D-ExtraBold.ttf in Resources */,
+				95C1FAFAD3B2445FB81C56BE /* K2D-ExtraBoldItalic.ttf in Resources */,
+				579AB7DFB11E42DAAF72A28B /* K2D-ExtraLight.ttf in Resources */,
+				71BE02068207426F9E77D456 /* K2D-ExtraLightItalic.ttf in Resources */,
+				B8D900E3B0B34FBB84523029 /* K2D-Italic.ttf in Resources */,
+				B0A3EBA453E0465B848B1A2C /* K2D-Light.ttf in Resources */,
+				FD6A8FD3570F42A5891D8578 /* K2D-LightItalic.ttf in Resources */,
+				E4F2C583C3034EDEBEDBC940 /* K2D-Medium.ttf in Resources */,
+				68A8562F8291431996DDEB5D /* K2D-MediumItalic.ttf in Resources */,
+				39B8D840222340EFA0FCCC8A /* K2D-Regular.ttf in Resources */,
+				E99F4C19F4364666A9EB3DBB /* K2D-SemiBold.ttf in Resources */,
+				D1AEA4630BAB4D2A8E5D3293 /* K2D-SemiBoldItalic.ttf in Resources */,
+				D6C0542E872B4266A7B75516 /* K2D-Thin.ttf in Resources */,
+				0B28049ADD004D7E8065F895 /* K2D-ThinItalic.ttf in Resources */,
+				406925FBE55F49EEB57CA9AA /* ._K2D-Bold.ttf in Resources */,
+				32476DF42A4047D9A3547C41 /* ._K2D-BoldItalic.ttf in Resources */,
+				2CDC0C2C4F8142EB8755B0C8 /* ._K2D-ExtraBold.ttf in Resources */,
+				680544E863B0452EA9745493 /* ._K2D-ExtraBoldItalic.ttf in Resources */,
+				2DCFFDC5A9784328BA889E41 /* ._K2D-ExtraLight.ttf in Resources */,
+				EF49175ADD16407AB4810F82 /* ._K2D-ExtraLightItalic.ttf in Resources */,
+				C0DAE9BFDCAF4A448BCB5B76 /* ._K2D-Italic.ttf in Resources */,
+				960D92ED5439457CA781BBAA /* ._K2D-Light.ttf in Resources */,
+				337B87902A1F4E5E892FDB64 /* ._K2D-LightItalic.ttf in Resources */,
+				13DB0557DF154A999B11BD71 /* ._K2D-Medium.ttf in Resources */,
+				C1DB6A40E5EF4B7CB04BE9AE /* ._K2D-MediumItalic.ttf in Resources */,
+				0C51B5FFBC964EB78D047564 /* ._K2D-Regular.ttf in Resources */,
+				09362DB2CC394B8C81E6C3DA /* ._K2D-SemiBold.ttf in Resources */,
+				90514854C140408DBB0CF055 /* ._K2D-SemiBoldItalic.ttf in Resources */,
+				CA8CC1F81D864314AB581523 /* ._K2D-Thin.ttf in Resources */,
+				A5D7F10EC960480880204FBC /* ._K2D-ThinItalic.ttf in Resources */,
+				D0D1AA325D734FDEBCA7F4F1 /* OFL.txt in Resources */,
+				E039E2E7C7F646328494F5FD /* ._K2D in Resources */,
+				8BCBEFFB7C3D4AB4B5B74C58 /* ._OFL.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
