@@ -1,14 +1,18 @@
 import React, { useState } from 'react'
 import { BrandColor, PrimaryColor } from '../../constants/theme';
-import { StyleSheet, Text, View, SafeAreaView, ScrollView, TouchableOpacity, Touchable } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, ScrollView, TouchableOpacity, Modal, Dimensions } from 'react-native';
 import { TestMap } from '../../api/testData';
 import LinkButton from '../../components/LinkButton/LinkButton';
 import Map from '../../api/types/map';
 import { MachineStatus } from '../../api/types/machine';
 import { db } from '../../../firebaseConfig';
+import Machine from '../../api/types/machine';
 import { collection, onSnapshot, getDoc, doc } from 'firebase/firestore';
+import MachineDetailScreen from '../../components/MachineDetail/MachineDetail';
+import { BottomSheet } from 'react-native-btr';
 
 export default function GymScreen({navigation}) {
+    const[modalMachine, setModalMachine] = useState<Machine | null>(null);
 
     const [data, setData] = useState();
     onSnapshot(doc(db, 'SwoleManGym', 'machine1'), (doc) => {
@@ -53,8 +57,8 @@ export default function GymScreen({navigation}) {
                         //item.status = Math.random() > .4 ? MachineStatus.Open : MachineStatus.Taken;
                         item.status = MachineStatus.Open;
                         return(
-                            <View style={[styles.machineContainer, { transform: item.rotation == 0 ? "none" : "rotate("+item.rotation+"deg)", left: item.x_pos, top: item.y_pos,  height: item.height,  width: item.width, backgroundColor: item.id == "machine_1" ? (data ? "green" : "red") : (item.status  === MachineStatus.Open ? "green" : "red")}]}>
-                               <TouchableOpacity onPress={()=>{navigation.navigate("MachineDetailScreen", { item: item })}}>    
+                            <View key={i} style={[styles.machineContainer, { transform: item.rotation == 0 ? "none" : "rotate("+item.rotation+"deg)", left: item.x_pos, top: item.y_pos,  height: item.height,  width: item.width, backgroundColor: item.id == "machine_1" ? (data ? "green" : "red") : (item.status  === MachineStatus.Open ? "green" : "red")}]}>
+                               <TouchableOpacity onPress={()=>{setModalMachine(item)}} style={{width: "100%", height: "100%", display: "flex", justifyContent: "center"}}>    
                                     <Text style={styles.machineText}>{item.name}</Text>
                                </TouchableOpacity>
                             </View>
@@ -63,6 +67,17 @@ export default function GymScreen({navigation}) {
                 }
             </ScrollView>
             </ScrollView>
+            <BottomSheet
+                visible={modalMachine !== null}
+                onBackButtonPress={()=>{setModalMachine(null)}}
+                onBackdropPress={()=>{setModalMachine(null)}}
+                >
+                    <View style={{width: "100%", justifyContent: "center", alignItems: "center"}}>
+                        <View style={{padding: 10, paddingBottom: 90, backgroundColor: BrandColor, width: "95%", borderTopRightRadius: 20, borderTopLeftRadius: 20}}>
+                            <MachineDetailScreen machine={modalMachine}/>
+                        </View>
+                    </View>
+            </BottomSheet>
       </SafeAreaView>
     )
 }
@@ -78,6 +93,7 @@ export default function GymScreen({navigation}) {
     machineText: {
         color: "white",
         fontWeight: "600",
+        fontSize: 5,
         textAlign: "center"
     },
     container: {
