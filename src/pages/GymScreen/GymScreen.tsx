@@ -72,7 +72,7 @@ export default function GymScreen({navigation}) {
                         item.status = MachineStatus.Open;
                         return(
                             <View style={[styles.machineContainer, { transform: item.rotation == 0 ? "none" : "rotate("+item.rotation+"deg)", left: item.x_pos, top: item.y_pos,  height: item.height,  width: item.width, backgroundColor: item.id == "machine_1" ? (data ? "green" : "red") : (item.status  === MachineStatus.Open ? "green" : "red")}]} key={i}>
-                               <TouchableOpacity onPress={()=>{navigation.navigate("MachineDetailScreen", { item: item })}}>    
+                               <TouchableOpacity onPress={()=>{navigation.navigate("MachineDetailScreen", { machine: item, })}}>    
                                     <Text style={styles.machineText}>{item.name}</Text>
                                </TouchableOpacity>
                             </View>

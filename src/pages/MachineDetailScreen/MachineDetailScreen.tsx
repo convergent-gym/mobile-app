@@ -5,32 +5,48 @@ import BigButton from '../../components/BigButton/BigButton';
 import LinkButton from '../../components/LinkButton/LinkButton';
 import { TestMap } from '../../api/testData';
 import { MachineType } from '../../api/types/machine';
+import AppLoading from 'expo-app-loading';
+import useFonts from '../../../hooks/useFonts';
 
-export default function MachineDetailScreen({navigation}) {
+export default function MachineDetailScreen({route, navigation}) {
     const [signInSignUp, setSignInSignUp] = useState<'SignIn' | 'SignUp'>('SignIn');
+    const item = route.params.machine;
+    const [IsReady, SetIsReady] = useState(false);
+    const LoadFonts = async () => {
+      await useFonts();
+    };
+    if (!IsReady) {
+      return (
+        <AppLoading
+          startAsync={LoadFonts}
+          onFinish={() => SetIsReady(true)}
+          onError={() => {}}
+        />
+      );
+    }
 
     return (
       <SafeAreaView style={styles.container}>
             <View style={{padding:  10}}> 
-                <Text style={styles.titleText}>{TestMap.items[0].name}</Text>
+                <Text style={styles.titleText}>{item.name}</Text>
                 <LinkButton onPressIn={()=>{navigation.pop()}} text="Back"/>
             </View>
 
             <View style={[styles.flexAbsoluteCenter]}>
                 <Image
                     style={styles.machineImage}
-                    source={require("../../../assets/lat-pulldown.png")}
+                    source={require("../../../assets/power-rack.png")}
                 />
 
                 {/* TODO: Export to own component */}
                 <View style={{display: "flex", flexDirection: "row", justifyContent: "space-around", width: "100%"}}>
                     <Text style={styles.detailTitle}>Type</Text>
-                    <Text style={styles.detailContent}>{MachineType[TestMap.items[0].type]}</Text>
+                    <Text style={styles.detailContent}>{MachineType[item.type]}</Text>
                 </View>
 
                 <View style={{display: "flex", flexDirection: "row", justifyContent: "space-around", width: "100%"}}>
                     <Text style={styles.detailTitle}>Model Num</Text>
-                    <Text style={styles.detailContent}>{TestMap.items[0].model_number}</Text>
+                    <Text style={styles.detailContent}>{item.model_number}</Text>
                 </View>
             </View>
 
@@ -42,11 +58,12 @@ export default function MachineDetailScreen({navigation}) {
   const styles = StyleSheet.create({
     detailTitle: {
         color: "white",
-        fontWeight: "bold",
+        fontFamily: 'K2D-Bold',
         fontSize: 26
     },
     detailContent: {
         color: "white",
+        fontFamily: 'K2D',
         fontSize: 26
     },
     flexAbsoluteCenter: {
@@ -67,12 +84,12 @@ export default function MachineDetailScreen({navigation}) {
     },
     optionDeselected: {
         color: '#FFFFFF',
-        fontWeight: 'bold',
+        fontFamily: 'K2D-Bold',
         fontSize: 24
     },
     optionSelected: {
         color: '#A0C182',
-        fontWeight: 'bold',
+        fontFamily: 'K2D-Bold',
         fontSize: 24
     },
     machineImage: {
@@ -85,10 +102,12 @@ export default function MachineDetailScreen({navigation}) {
     },
     body: {
       color: 'green',
+      fontFamily: 'K2D',
       fontSize: 60,
     },
     titleText: {
       color: '#FFFFFF',
+      fontFamily: 'K2D-Bold',
       fontSize: 48
     },
   });

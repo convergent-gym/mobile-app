@@ -328,7 +328,7 @@ export const TestMap: Map = {
             width: 50,
             rotation: 0,
             status: MachineStatus.Open,
-            type: MachineType.Cable,
+            type: MachineType.FreeWeight,
             gym_id: "abc123",
             model_number: "xyz456"
         },
