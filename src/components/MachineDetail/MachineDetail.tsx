@@ -5,6 +5,8 @@ import BigButton from '../../components/BigButton/BigButton';
 import LinkButton from '../../components/LinkButton/LinkButton';
 import { TestMap } from '../../api/testData';
 import Machine, { MachineType } from '../../api/types/machine';
+import { MachineStatus } from '../../api/types/machine';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function MachineDetailScreen(props: {machine: Machine}) {
 
@@ -16,21 +18,30 @@ export default function MachineDetailScreen(props: {machine: Machine}) {
                         <Text style={styles.titleText}>{props.machine.name}</Text>
                     </View>
 
-                    <View style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
-                        <View>
-                            <View style={{borderWidth: 2, borderColor: "#000000", borderRadius: 10, backgroundColor: PrimaryColor, padding: 2, height: 50, display: "flex", justifyContent: "center"}}>
-                                <Text style={styles.spotlightContent}>5</Text>
+                    { props.machine.status !== MachineStatus.Maintenance && 
+                        <View style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
+                            <View>
+                                <View style={{borderWidth: 2, borderColor: "#000000", borderRadius: 10, backgroundColor: PrimaryColor, padding: 2, height: 50, display: "flex", justifyContent: "center"}}>
+                                    <Text style={styles.spotlightContent}>5</Text>
+                                </View>
+                                <Text style={styles.detailContent}>Avaliable Now</Text>
                             </View>
-                            <Text style={styles.detailContent}>Avaliable Now</Text>
-                        </View>
-                        <View>
-                            <View style={{borderWidth: 2, borderColor: "#000000", borderRadius: 10, backgroundColor: PrimaryColor, padding: 2, height: 50}}>
-                                <Text style={styles.spotlightContent}>5 - 15</Text>
-                                <Text style={styles.spotlightContentSm}>Mins</Text>
+                            <View>
+                                <View style={{borderWidth: 2, borderColor: "#000000", borderRadius: 10, backgroundColor: PrimaryColor, padding: 2, height: 50}}>
+                                    <Text style={styles.spotlightContent}>5 - 15</Text>
+                                    <Text style={styles.spotlightContentSm}>Mins</Text>
+                                </View>
+                                <Text style={styles.detailContent}>Average Wait</Text>
                             </View>
-                            <Text style={styles.detailContent}>Average Wait</Text>
                         </View>
-                    </View>
+                    }
+
+                    {  props.machine.status !== MachineStatus.Maintenance ||
+                        <View style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center"}}>
+                             <Ionicons name="warning" size={32} color="white" />
+                             <Text style={styles.detailContent}>This machine is under maintence</Text>
+                        </View>
+                    }
 
                     <View style={[styles.flexAbsoluteCenter, {marginTop: 30}]}>
                         {/* TODO: Export to own component */}
@@ -43,7 +54,6 @@ export default function MachineDetailScreen(props: {machine: Machine}) {
                             <Text style={styles.detailTitle}>Model</Text>
                             <Text style={styles.detailContent}>{props.machine.model_number}</Text>
                         </View>
-                
                     </View>
                 </View>
             }       

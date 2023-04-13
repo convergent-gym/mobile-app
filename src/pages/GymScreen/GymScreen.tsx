@@ -10,14 +10,28 @@ import Machine from '../../api/types/machine';
 import { collection, onSnapshot, getDoc, doc } from 'firebase/firestore';
 import MachineDetailScreen from '../../components/MachineDetail/MachineDetail';
 import { BottomSheet } from 'react-native-btr';
+import Gym from '../../api/types/gym';
 
-export default function GymScreen({navigation}) {
+export default function GymScreen({route, navigation}) {
+    const { gym }: {gym: Gym} = route.params;
     const[modalMachine, setModalMachine] = useState<Machine | null>(null);
 
     const [data, setData] = useState();
     onSnapshot(doc(db, 'SwoleManGym', 'machine1'), (doc) => {
         setData(doc.data().occupied);
     })
+
+    function statusToColor(stat: MachineStatus) {
+        switch(stat) {
+            case MachineStatus.Open:
+                return "green"
+            case MachineStatus.Taken:
+                return "red"
+            case MachineStatus.Maintenance:
+                return "grey"
+        }
+        return "";
+    }
 
     function getMapBounds(map: Map) {
         let max_width = -1;
@@ -42,7 +56,7 @@ export default function GymScreen({navigation}) {
       <SafeAreaView style={styles.container}>
             <View style={{width: "90%", marginVertical: 30}}> 
                 <LinkButton text={"Back"} onPressIn={()=>{navigation.pop()}}/>
-                <Text style={styles.titleText}>Gregory Gym</Text>
+                <Text style={styles.titleText}>{gym.name}</Text>
                 <Text style={{color: PrimaryColor, fontSize: 24}}>
                     Showing all machines
                 </Text>     
@@ -56,8 +70,11 @@ export default function GymScreen({navigation}) {
                     TestMap.items.map((item, i)=>{
                         //item.status = Math.random() > .4 ? MachineStatus.Open : MachineStatus.Taken;
                         item.status = MachineStatus.Open;
+                        if(i == 53) {
+                            item.status = MachineStatus.Maintenance;
+                        }
                         return(
-                            <View key={i} style={[styles.machineContainer, { transform: item.rotation == 0 ? "none" : "rotate("+item.rotation+"deg)", left: item.x_pos, top: item.y_pos,  height: item.height,  width: item.width, backgroundColor: item.id == "machine_1" ? (data ? "green" : "red") : (item.status  === MachineStatus.Open ? "green" : "red")}]}>
+                            <View key={i} style={[styles.machineContainer, { transform: item.rotation == 0 ? "none" : "rotate("+item.rotation+"deg)", left: item.x_pos, top: item.y_pos,  height: item.height,  width: item.width, backgroundColor: item.id == "machine_1" ? (data ? "green" : "red") : statusToColor(item.status)}]}>
                                <TouchableOpacity onPress={()=>{setModalMachine(item)}} style={{width: "100%", height: "100%", display: "flex", justifyContent: "center"}}>    
                                     <Text style={styles.machineText}>{item.name}</Text>
                                </TouchableOpacity>
@@ -103,6 +120,6 @@ export default function GymScreen({navigation}) {
     },
     titleText: {
       color: '#FFFFFF',
-      fontSize: 36
+      fontSize: 33
     },
   });
