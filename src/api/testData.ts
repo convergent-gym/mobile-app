@@ -1,10 +1,7 @@
 import Gym from "./types/gym"
-import Map from "./types/map"
 import Machine, { MachineType, MachineStatus } from "./types/machine"
 
-export const TestMap: Map = {
-    id: "abc123",
-    items: [
+export const TestMap: Machine[] = [
         {
             id: "machine_16",
             name: "Lat Pulldown",
@@ -1718,8 +1715,6 @@ export const TestMap: Map = {
         },
 
     ]
-
-}
 
 export const Gyms: Gym[] = [
     {

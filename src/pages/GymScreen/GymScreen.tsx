@@ -1,25 +1,37 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrandColor, PrimaryColor } from '../../constants/theme';
-import { StyleSheet, Text, View, SafeAreaView, ScrollView, TouchableOpacity, Modal, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
 import { TestMap } from '../../api/testData';
 import LinkButton from '../../components/LinkButton/LinkButton';
-import Map from '../../api/types/map';
-import { MachineStatus } from '../../api/types/machine';
+import { MachineStatus, MachineType } from '../../api/types/machine';
 import { db } from '../../../firebaseConfig';
 import Machine from '../../api/types/machine';
-import { collection, onSnapshot, getDoc, doc } from 'firebase/firestore';
+import { onSnapshot, doc, collection, setDoc } from 'firebase/firestore';
 import MachineDetailScreen from '../../components/MachineDetail/MachineDetail';
 import { BottomSheet } from 'react-native-btr';
 import Gym from '../../api/types/gym';
 
 export default function GymScreen({route, navigation}) {
     const { gym }: {gym: Gym} = route.params;
-    const[modalMachine, setModalMachine] = useState<Machine | null>(null);
 
-    const [data, setData] = useState();
-    onSnapshot(doc(db, 'SwoleManGym', 'machine1'), (doc) => {
-        setData(doc.data().occupied);
-    })
+    const[modalMachine, setModalMachine] = useState<Machine | null>(null);
+    const[machines, setMachines] = useState<Machine[]>([]);
+    
+
+    useEffect(()=>{
+        onSnapshot(collection(db, 'machines'), (allMachines) => {
+            let machine_list: Machine[] = [];
+            allMachines.forEach((machine)=>{
+                let machineObject = machine.data();
+                machineObject.type =  MachineType[machineObject.type];
+                machineObject.status =  MachineStatus[machineObject.status];
+
+                machine_list.push(machineObject as Machine);
+            })
+
+            setMachines(machine_list);
+        })
+    }, []);
 
     function statusToColor(stat: MachineStatus) {
         switch(stat) {
@@ -30,15 +42,14 @@ export default function GymScreen({route, navigation}) {
             case MachineStatus.Maintenance:
                 return "grey"
         }
-        return "";
     }
 
-    function getMapBounds(map: Map) {
+    function getMapBounds(map: Machine[]) {
         let max_width = -1;
         let max_height = -1;
-        for(let i = 0; i < map.items.length; i++) {
-            let item_rightmost = map.items[i].width + map.items[i].x_pos;
-            let item_bottommost = map.items[i].height + map.items[i].y_pos;
+        for(let i = 0; i < map.length; i++) {
+            let item_rightmost = map[i].width + map[i].x_pos;
+            let item_bottommost = map[i].height + map[i].y_pos;
             
             if(item_rightmost > max_width)
                 max_width = item_rightmost;
@@ -65,16 +76,11 @@ export default function GymScreen({route, navigation}) {
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{backgroundColor: "white", width: "100%", height: "100%"}}>
 
             {/* Dummy view is necessary to allow scrolling */}
-            <View style={{width: getMapBounds(TestMap).max_width, height: getMapBounds(TestMap).max_height}}></View>
+            <View style={{width: getMapBounds(machines).max_width, height: getMapBounds(machines).max_height}}></View>
                 {
-                    TestMap.items.map((item, i)=>{
-                        //item.status = Math.random() > .4 ? MachineStatus.Open : MachineStatus.Taken;
-                        item.status = MachineStatus.Open;
-                        if(i == 53) {
-                            item.status = MachineStatus.Maintenance;
-                        }
+                    machines.map((item, i)=>{
                         return(
-                            <View key={i} style={[styles.machineContainer, { transform: item.rotation == 0 ? "none" : "rotate("+item.rotation+"deg)", left: item.x_pos, top: item.y_pos,  height: item.height,  width: item.width, backgroundColor: item.id == "machine_1" ? (data ? "green" : "red") : statusToColor(item.status)}]}>
+                            <View key={i} style={[styles.machineContainer, { transform: item.rotation == 0 ? "none" : "rotate("+item.rotation+"deg)", left: item.x_pos, top: item.y_pos,  height: item.height,  width: item.width, backgroundColor: statusToColor(item.status)}]}>
                                <TouchableOpacity onPress={()=>{setModalMachine(item)}} style={{width: "100%", height: "100%", display: "flex", justifyContent: "center"}}>    
                                     <Text style={styles.machineText}>{item.name}</Text>
                                </TouchableOpacity>

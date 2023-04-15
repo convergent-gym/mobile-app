@@ -39,7 +39,7 @@ export default function MachineDetailScreen(props: {machine: Machine}) {
                     {  props.machine.status !== MachineStatus.Maintenance ||
                         <View style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center"}}>
                              <Ionicons name="warning" size={32} color="white" />
-                             <Text style={styles.detailContent}>This machine is under maintence</Text>
+                             <Text style={styles.detailContent}>This machine is under maintenance</Text>
                         </View>
                     }
 

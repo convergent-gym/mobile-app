@@ -1,11 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrandColor, PrimaryColor } from '../../constants/theme';
 import { StyleSheet, Text, View, SafeAreaView, ScrollView } from 'react-native';
 import { Gyms } from '../../api/testData';
+import { db } from '../../../firebaseConfig';
 import GymCard from '../../components/GymCard/GymCard';
 import LinkButton from '../../components/LinkButton/LinkButton';
+import { onSnapshot, doc, collection, setDoc } from 'firebase/firestore';
+import Gym from '../../api/types/gym';
 
 export default function GymSelecionScreen({navigation}) {
+
+    const [gyms, setGyms] = useState<Gym[]>([]);
+
+    useEffect(()=>{
+      onSnapshot(collection(db, 'gyms'), (allGyms) => {
+          let gym_list: Gym[] = [];
+          allGyms.forEach((gym)=>{
+            gym_list.push(gym.data() as Gym);
+          })
+
+          setGyms(gym_list);
+      })
+    }, []);
+
+
     return (
       <SafeAreaView style={styles.container}>
             <View style={{width: "90%", marginVertical: 30}}> 
@@ -17,7 +35,7 @@ export default function GymSelecionScreen({navigation}) {
             </View>
 
             <ScrollView style={{width: '100%'}}>
-                {Gyms.map((gym, i) => (<GymCard gym={gym} key={i} onPress={()=>{navigation.navigate("GymScreen", {gym: gym})}}/>))}
+                {gyms.map((gym, i) => (<GymCard gym={gym} key={i} onPress={()=>{navigation.navigate("GymScreen", {gym: gym})}}/>))}
             </ScrollView>
       </SafeAreaView>
     )
